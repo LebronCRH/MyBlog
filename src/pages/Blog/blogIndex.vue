@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <div class="waterfall_Div" style="position:relative">
-            <div class="cation-middle">
+        <div class="waterfall_Div" style="position:relative" id="waterfall_Div">
+            <div class="cation-middle" :class="FixedTop?'FixedTop':''">
                     <dl class="cation-list">
                         <dt>分类</dt>
                         <dd>
@@ -29,6 +29,7 @@ import Waterfall from "../../components/waterfall";
 export default {
     data(){
         return{
+            FixedTop:false,
             imgsArr: [],
             group: 0, // 当前加载的加载图片的次数
             fetchImgsArr: []    //存放每次滚动时下一批要加载的图片的数组
@@ -38,10 +39,20 @@ export default {
         Waterfall
     },
     mounted(){
-
+        window.addEventListener('scroll', this.PageScroll);
+    },
+    destroyed(){
+        window.removeEventListener('scroll',this.PageScroll);
     },
     methods:{
-
+        PageScroll(){
+            var ScrTop=document.documentElement.scrollTop;
+            if(ScrTop>=document.getElementById('main').offsetTop-100){
+                this.FixedTop=true;
+            }else{
+                this.FixedTop=false;
+            }
+        }
     },
     created () {
 
@@ -57,6 +68,13 @@ export default {
     background: #fff;
     padding: 10px 20px 10px 30px;
     font-size: 14px;
+    transition: all 0.5s;
+    &.FixedTop{
+        position:fixed;
+        top:100px;
+        width:100%;
+        opacity:0.8;z-index:99;
+    }
     .cation-list {
         overflow: hidden;
         display: flex;

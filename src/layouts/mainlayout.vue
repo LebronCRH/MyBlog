@@ -45,16 +45,22 @@
                                 <div class="menu-menu-container">
                                     <ul id="primary-menu" class="menu">
                                         <li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-17">
-                                            <a href="index.html">首页</a>
+                                            <router-link :to="{ path: '/'}">首页</router-link>
                                         </li>
                                         <li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173">
-                                            <a href="update.html">更新</a>
+                                            <router-link :to="{ path: '/blogIndex'}">博客主页</router-link>
                                         </li>
                                         <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78">
-                                            <a href="link.html">链接</a>
+                                            <a href="link.html">我的项目</a>
                                         </li>
                                         <li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-252">
-                                            <a href="archives.html">归档</a>
+                                            <router-link :to="{ path: '/markdown'}">写博客</router-link>
+                                        </li>
+                                        <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78">
+                                            <a href="link.html">开发插件</a>
+                                        </li>
+                                        <li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78">
+                                            <a href="link.html">关于我的</a>
                                         </li>
                                         <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">
                                             <a href="gustbook.html">留言</a>
@@ -70,43 +76,6 @@
                 <i class=" js-toggle-search iconfont">&#xe60e;</i>
             </div>
         </div>
-        <!-- <div class="navi open aos-init aos-animate" data-aos="fade-down" :class="Menushow?'close':''">
-			<div class="bt-nav" @click="TaggleMenu()">
-				<div class="line line1"></div>
-				<div class="line line2"></div>
-				<div class="line line3"></div>
-			</div>
-            <div class="navbar animated fadeInRight">
-				<div class="inner">
-					<nav id="site-navigation" class="main-navigation">
-						<div id="main-menu" class="main-menu-container">
-							<div class="menu-menu-container">
-								<ul id="primary-menu" class="menu">
-									<li id="menu-item-17" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-17">
-										<a href="index.html">首页</a>
-									</li>
-									<li id="menu-item-173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-173">
-										<a href="update.html">更新</a>
-									</li>
-									<li id="menu-item-78" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-78">
-										<a href="link.html">链接</a>
-									</li>
-									<li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-252">
-										<a href="archives.html">归档</a>
-									</li>
-									<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57">
-										<a href="gustbook.html">留言</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</div>
-        <div class="hebin" data-aos="fade-down" @click="TaggleSearchShow()">
-			<i class=" js-toggle-search iconfont">&#xe60e;</i>
-		</div> -->
         <header id="masthead" class="overlay animated from-bottom" itemprop="brand" v-waypoint="{ active: true, callback: onWaypoint, options: intersectionOptions }">
 			<div class="site-branding text-center">
 					<div class="MyImg">

@@ -1,5 +1,5 @@
 <template>
-<div style="display:flex;justify-content: center;">
+    <div style="display:flex;justify-content: center;">
         <div style="width:50%">
             <vue-data-loading
                     :loading="loading"
@@ -259,6 +259,7 @@ export default {
         console.log(this.swiper);
         window.addEventListener('scroll', this.PageScroll);
     },
+     
     destroyed(){
         window.removeEventListener('scroll',this.PageScroll);
     },

@@ -20,10 +20,6 @@ export default new Router({
           component: Home,
         },
         {
-          path:'/markdown',
-          component: MarkDown,
-        },
-        {
           path:'/detail',
           component: BlogDetails,
         },
@@ -32,6 +28,10 @@ export default new Router({
           component: BlogIndex,
         }
       ]
+    },
+    {
+      path:'/markdown',
+      component: MarkDown,
     }
   ]
 })
