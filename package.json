@@ -43,7 +43,7 @@
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "loadsh": "^0.0.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0",
     "node-notifier": "^5.1.2",
     "node-sass": "^4.12.0",
